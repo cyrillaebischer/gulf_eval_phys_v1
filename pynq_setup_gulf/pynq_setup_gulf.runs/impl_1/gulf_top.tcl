@@ -60,26 +60,19 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache C:/Users/Cyrill/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-22140-LAPTOP-ISQIQK2U/incrSyn
-  create_project -in_memory -part xc7z020clg400-1
-  set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
+  set_param xicom.use_bs_reader 1
+  reset_param project.defaultXPMLibraries 
+  open_checkpoint {C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.runs/impl_1/gulf_top.dcp}
   set_property webtalk.parent_dir {C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.cache/wt} [current_project]
   set_property parent.project_path {C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.xpr} [current_project]
   set_property ip_output_repo {{C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet {{C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.runs/synth_1/gulf_top.dcp}}
-  read_ip -quiet {{c:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/ip/data_rom_1/data_rom.xci}}
-  read_xdc {{C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/constrs_1/new/physical.xdc}}
-  link_design -top gulf_top -part xc7z020clg400-1
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {
@@ -158,6 +151,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   catch { write_mem_info -force gulf_top.mmi }
   write_bitstream -force gulf_top.bit 
   catch {write_debug_probes -quiet -force gulf_top}

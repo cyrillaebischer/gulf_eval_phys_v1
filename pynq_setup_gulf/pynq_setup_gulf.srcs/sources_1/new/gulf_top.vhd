@@ -35,8 +35,11 @@ entity gulf_top is
     Port ( clk_i : in std_logic;
            en_i  : in std_logic;
            rst_i : in std_logic;
+           clk_o : out std_logic;
            data_out_p : out std_logic;
-           data_out_n : out std_logic           
+           data_out_n : out std_logic;
+           data_in_p  : in std_logic;
+           data_in_n  : in std_logic          
            );
 end gulf_top;
 
@@ -59,10 +62,17 @@ architecture Behavioral of gulf_top is
             );
     end component;
     
+    COMPONENT ila_0   
+    PORT (
+        clk : IN STD_LOGIC;
+        probe0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
+    );
+    END COMPONENT  ;
+    
     
     signal adr_s : std_logic_vector(11 downto 0);
-    signal data_sv : std_logic_vector(0 downto 0);
-    signal data_s : std_logic;
+    signal data_sv, data_in_sv : std_logic_vector(0 downto 0);
+    signal data_s, data_in_s : std_logic;
 
 begin
     
@@ -91,6 +101,28 @@ begin
          OB => data_out_n, -- Diff_n output (connect directly to top-level port)
          I => data_s -- Buffer input
         );
+        
+    IBUFDS_inst : IBUFDS
+        generic map (
+         DIFF_TERM => FALSE, -- Differential Termination
+         IBUF_LOW_PWR => TRUE, -- Low power (TRUE) vs. performance (FALSE) setting for referenced I/O standards
+         IOSTANDARD => "DEFAULT")
+        port map (
+         O => data_in_s, -- Buffer output
+         I => data_in_p, -- Diff_p buffer input (connect directly to top-level port)
+         IB => data_in_n -- Diff_n buffer input (connect directly to top-level port)
+        );
+        
+    ---- clock send ----
+    clk_o <= clk_i;
 
+------------ DEBUG ------------
+data_in_sv(0) <= data_in_s;
+
+data_in_probe: ila_0
+PORT MAP (
+	clk => clk_i,
+	probe0 => data_in_sv
+);
 
 end Behavioral;

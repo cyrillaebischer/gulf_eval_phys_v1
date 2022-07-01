@@ -14,25 +14,65 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11548 
+INFO: Helper process launched with PID 19528 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 442.969 ; gain = 91.250
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 468.445 ; gain = 96.062
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'gulf_top' [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/new/gulf_top.vhd:43]
-INFO: [Synth 8-3491] module 'data_rom' declared at 'C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.runs/synth_1/.Xil/Vivado-1988-LAPTOP-ISQIQK2U/realtime/data_rom_stub.v:6' bound to instance 'simul_data' of component 'data_rom' [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/new/gulf_top.vhd:69]
-INFO: [Synth 8-6157] synthesizing module 'data_rom' [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.runs/synth_1/.Xil/Vivado-1988-LAPTOP-ISQIQK2U/realtime/data_rom_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'data_rom' (1#1) [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.runs/synth_1/.Xil/Vivado-1988-LAPTOP-ISQIQK2U/realtime/data_rom_stub.v:6]
-INFO: [Synth 8-3491] module 'data_fsm' declared at 'C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/new/data_fsm.vhd:34' bound to instance 'statemachine' of component 'data_fsm' [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/new/gulf_top.vhd:75]
+ERROR: [Synth 8-2778] type error near data_in_s ; expected type std_logic_vector [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/new/gulf_top.vhd:119]
+INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/new/gulf_top.vhd:45]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 520.086 ; gain = 147.703
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Fri Jul  1 09:35:08 2022...
+
+*** Running vivado
+    with args -log gulf_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source gulf_top.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source gulf_top.tcl -notrace
+Command: synth_design -top gulf_top -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15840 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 468.469 ; gain = 96.582
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'gulf_top' [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/new/gulf_top.vhd:45]
+INFO: [Synth 8-3491] module 'data_rom' declared at 'C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.runs/synth_1/.Xil/Vivado-14792-LAPTOP-ISQIQK2U/realtime/data_rom_stub.vhdl:5' bound to instance 'simul_data' of component 'data_rom' [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/new/gulf_top.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'data_rom' [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.runs/synth_1/.Xil/Vivado-14792-LAPTOP-ISQIQK2U/realtime/data_rom_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'data_fsm' declared at 'C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/new/data_fsm.vhd:34' bound to instance 'statemachine' of component 'data_fsm' [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/new/gulf_top.vhd:84]
 INFO: [Synth 8-638] synthesizing module 'data_fsm' [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/new/data_fsm.vhd:44]
 INFO: [Synth 8-226] default block is never used [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/new/data_fsm.vhd:63]
-INFO: [Synth 8-256] done synthesizing module 'data_fsm' (2#1) [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/new/data_fsm.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'data_fsm' (1#1) [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/new/data_fsm.vhd:44]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-113] binding component instance 'OBUFDS_inst' to cell 'OBUFDS' [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/new/gulf_top.vhd:85]
-INFO: [Synth 8-256] done synthesizing module 'gulf_top' (3#1) [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/new/gulf_top.vhd:43]
+INFO: [Synth 8-113] binding component instance 'OBUFDS_inst' to cell 'OBUFDS' [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/new/gulf_top.vhd:94]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: 0 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'IBUFDS_inst' to cell 'IBUFDS' [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/new/gulf_top.vhd:104]
+INFO: [Synth 8-3491] module 'ila_0' declared at 'C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.runs/synth_1/.Xil/Vivado-14792-LAPTOP-ISQIQK2U/realtime/ila_0_stub.vhdl:5' bound to instance 'data_in_probe' of component 'ila_0' [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/new/gulf_top.vhd:118]
+INFO: [Synth 8-638] synthesizing module 'ila_0' [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.runs/synth_1/.Xil/Vivado-14792-LAPTOP-ISQIQK2U/realtime/ila_0_stub.vhdl:13]
+INFO: [Synth 8-256] done synthesizing module 'gulf_top' (2#1) [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/new/gulf_top.vhd:45]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 497.309 ; gain = 145.590
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 522.957 ; gain = 151.070
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -45,52 +85,54 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 497.309 ; gain = 145.590
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 522.957 ; gain = 151.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 497.309 ; gain = 145.590
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 522.957 ; gain = 151.070
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+Parsing XDC File [c:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/ip/ila_0_1/ila_0/ila_0_in_context.xdc] for cell 'data_in_probe'
+Finished Parsing XDC File [c:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/ip/ila_0_1/ila_0/ila_0_in_context.xdc] for cell 'data_in_probe'
 Parsing XDC File [c:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/ip/data_rom_1/data_rom/data_rom_in_context.xdc] for cell 'simul_data'
 Finished Parsing XDC File [c:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/ip/data_rom_1/data_rom/data_rom_in_context.xdc] for cell 'simul_data'
 Parsing XDC File [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/constrs_1/new/physical.xdc]
 Finished Parsing XDC File [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/constrs_1/new/physical.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/constrs_1/new/physical.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/gulf_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/gulf_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 828.715 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 851.016 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'data_in_probe' at clock pin 'clk' is different from the actual clock period '0.780', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 828.715 ; gain = 476.996
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:22 . Memory (MB): peak = 852.098 ; gain = 480.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 828.715 ; gain = 476.996
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:22 . Memory (MB): peak = 852.098 ; gain = 480.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for data_in_probe. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for simul_data. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 828.715 ; gain = 476.996
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:22 . Memory (MB): peak = 852.098 ; gain = 480.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 828.715 ; gain = 476.996
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 852.098 ; gain = 480.211
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -144,7 +186,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 828.715 ; gain = 476.996
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 852.098 ; gain = 480.211
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -156,13 +198,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 851.445 ; gain = 499.727
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:33 . Memory (MB): peak = 875.895 ; gain = 504.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 861.480 ; gain = 509.762
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:33 . Memory (MB): peak = 885.727 ; gain = 513.840
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -174,7 +216,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 861.492 ; gain = 509.773
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:33 . Memory (MB): peak = 885.766 ; gain = 513.879
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -198,7 +240,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:35 . Memory (MB): peak = 861.492 ; gain = 509.773
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 885.766 ; gain = 513.879
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -211,7 +253,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:35 . Memory (MB): peak = 861.492 ; gain = 509.773
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 885.766 ; gain = 513.879
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -223,25 +265,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:35 . Memory (MB): peak = 861.492 ; gain = 509.773
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 885.766 ; gain = 513.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:35 . Memory (MB): peak = 861.492 ; gain = 509.773
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 885.766 ; gain = 513.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:35 . Memory (MB): peak = 861.492 ; gain = 509.773
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 885.766 ; gain = 513.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:35 . Memory (MB): peak = 861.492 ; gain = 509.773
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 885.766 ; gain = 513.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -252,39 +294,42 @@ Report BlackBoxes:
 |      |BlackBox name |Instances |
 +------+--------------+----------+
 |1     |data_rom      |         1|
+|2     |ila_0         |         1|
 +------+--------------+----------+
 
 Report Cell Usage: 
-+------+---------+------+
-|      |Cell     |Count |
-+------+---------+------+
-|1     |data_rom |     1|
-|2     |BUFG     |     1|
-|3     |CARRY4   |     3|
-|4     |LUT1     |     2|
-|5     |LUT2     |    13|
-|6     |LUT4     |     2|
-|7     |LUT6     |     1|
-|8     |FDRE     |    13|
-|9     |IBUF     |     3|
-|10    |OBUFDS   |     1|
-+------+---------+------+
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |data_rom_bbox_0 |     1|
+|2     |ila_0_bbox_1    |     1|
+|3     |BUFG            |     1|
+|4     |CARRY4          |     3|
+|5     |LUT1            |     2|
+|6     |LUT2            |    13|
+|7     |LUT4            |     2|
+|8     |LUT6            |     1|
+|9     |FDRE            |    13|
+|10    |IBUF            |     3|
+|11    |IBUFDS          |     1|
+|12    |OBUFDS          |     1|
++------+----------------+------+
 
 Report Instance Areas: 
 +------+---------------+---------+------+
 |      |Instance       |Module   |Cells |
 +------+---------------+---------+------+
-|1     |top            |         |    40|
+|1     |top            |         |    41|
 |2     |  statemachine |data_fsm |    34|
 +------+---------------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:35 . Memory (MB): peak = 861.492 ; gain = 509.773
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 885.766 ; gain = 513.879
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 861.492 ; gain = 178.367
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:36 . Memory (MB): peak = 861.492 ; gain = 509.773
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 885.766 ; gain = 184.738
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:35 . Memory (MB): peak = 885.766 ; gain = 513.879
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -293,11 +338,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-24 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+26 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:38 . Memory (MB): peak = 877.609 ; gain = 537.371
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 901.789 ; gain = 531.652
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.runs/synth_1/gulf_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file gulf_top_utilization_synth.rpt -pb gulf_top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 877.609 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Jun 30 15:39:37 2022...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 901.789 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Jul  1 09:38:09 2022...

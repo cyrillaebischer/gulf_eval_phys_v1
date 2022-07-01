@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1656639522">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1656704677">
   <File Type="PA-TCL" Name="gulf_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="gulf_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="gulf_top_reports.tcl"/>
@@ -11,13 +11,6 @@
   <File Type="VDS-TIMING-PB" Name="gulf_top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/ip/data_rom_1/data_rom.xci">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/data_fsm.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -50,6 +43,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/physical.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -59,4 +53,6 @@
     </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="ila_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="data_rom"/>
 </GenRun>
