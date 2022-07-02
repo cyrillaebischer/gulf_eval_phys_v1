@@ -62,12 +62,12 @@ architecture Behavioral of gulf_top is
             );
     end component;
     
-    COMPONENT ila_0   
-    PORT (
-        clk : IN STD_LOGIC;
-        probe0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
-    );
-    END COMPONENT  ;
+--    COMPONENT ila_0   
+--    PORT (
+--        clk : IN STD_LOGIC;
+--        probe0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
+--    );
+--    END COMPONENT  ;
     
     
     signal adr_s : std_logic_vector(11 downto 0);
@@ -116,13 +116,15 @@ begin
     ---- clock send ----
     clk_o <= clk_i;
 
+    ---- input ports for debug ----
+    data_in_sv(0) <= data_in_s;
+    
 ------------ DEBUG ------------
-data_in_sv(0) <= data_in_s;
 
-data_in_probe: ila_0
-PORT MAP (
-	clk => clk_i,
-	probe0 => data_in_sv
-);
+--data_in_probe: ila_0
+--PORT MAP (
+--    clk => clk_i,
+--    probe0 => data_in_sv
+--);
 
 end Behavioral;
