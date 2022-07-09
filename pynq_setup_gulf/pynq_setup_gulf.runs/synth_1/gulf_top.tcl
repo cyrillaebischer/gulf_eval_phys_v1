@@ -18,7 +18,6 @@ proc create_report { reportName command } {
   }
 }
 set_param tcl.collectionResultDisplayLimit 0
-set_param synth.incrementalSynthesisCache C:/Users/Cyrill/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-21216-LAPTOP-ISQIQK2U/incrSyn
 set_param xicom.use_bs_reader 1
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000

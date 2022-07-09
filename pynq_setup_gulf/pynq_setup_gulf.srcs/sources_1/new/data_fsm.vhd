@@ -58,7 +58,7 @@ begin
             if rising_edge(clk_i) then 
                 if (rst_i='1') then
                     state_s  <= RESET;
-                                 
+                    adr_v := "000000000000";            
                 else
                     case state_s is
                         when RESET =>
