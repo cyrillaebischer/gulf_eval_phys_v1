@@ -19,8 +19,6 @@ proc create_report { reportName command } {
 }
 set_param tcl.collectionResultDisplayLimit 0
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -29,6 +27,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir {C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.cache/wt} [current_project]
 set_property parent.project_path {C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.xpr} [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
@@ -41,6 +40,12 @@ read_vhdl -library xil_defaultlib {
 }
 read_ip -quiet {{C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/ip/data_rom_1/data_rom.xci}}
 set_property used_in_implementation false [get_files -all {{c:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/ip/data_rom_1/data_rom_ooc.xdc}}]
+
+read_ip -quiet {{C:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/ip/ila_0_4/ila_0.xci}}
+set_property used_in_synthesis false [get_files -all {{c:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/ip/ila_0_4/ila_v6_2/constraints/ila_impl.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/ip/ila_0_4/ila_v6_2/constraints/ila_impl.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/ip/ila_0_4/ila_v6_2/constraints/ila.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/Cyrill/Documents/S6/BA-GULFstream/Pynq Setup/pynq_setup_gulf/pynq_setup_gulf.srcs/sources_1/ip/ila_0_4/ila_0_ooc.xdc}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

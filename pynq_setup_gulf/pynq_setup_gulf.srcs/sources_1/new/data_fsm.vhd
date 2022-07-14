@@ -54,21 +54,25 @@ begin
     
     process (clk_i)
         variable adr_v : unsigned(11 downto 0) := "000000000000";
+        variable en_mem: std_logic := '0';
         begin
             if rising_edge(clk_i) then 
                 if (rst_i='1') then
                     state_s  <= RESET;
-                    adr_v := "000000000000";            
+                    adr_v := "000000000000";      
+                    en_mem := '0';      
                 else
                     case state_s is
                         when RESET =>
                             adr_v := "000000000000";
-                            if en_i = '1' then
+                            if en_i = '1' and en_mem = '0' then
                                 state_s <= READ;
+                                en_mem := '1';
                             end if;   
                         when READ =>
-                             if adr_v = "100000010001" then                        
-                                 adr_v := "000000000000";
+                             if adr_v = "100000000000" then     -- 1000000111010                       
+                                -- adr_v := "000000000000";
+                                state_s <= RESET;
                              else
                                 
                                 adr_v := adr_v + 1;   
