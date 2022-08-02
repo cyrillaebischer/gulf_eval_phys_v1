@@ -58,14 +58,14 @@ module data_rom (
   spo
 );
 
-input wire [11 : 0] a;
+input wire [14 : 0] a;
 output wire [0 : 0] spo;
 
   dist_mem_gen_v8_0_12 #(
     .C_FAMILY("zynq"),
-    .C_ADDR_WIDTH(12),
+    .C_ADDR_WIDTH(15),
     .C_DEFAULT_DATA("0"),
-    .C_DEPTH(4096),
+    .C_DEPTH(32768),
     .C_HAS_CLK(0),
     .C_HAS_D(0),
     .C_HAS_DPO(0),
@@ -97,7 +97,7 @@ output wire [0 : 0] spo;
   ) inst (
     .a(a),
     .d(1'B0),
-    .dpra(12'B0),
+    .dpra(15'B0),
     .clk(1'D0),
     .we(1'D0),
     .i_ce(1'D1),

@@ -58,7 +58,7 @@ USE dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12;
 
 ENTITY data_rom IS
   PORT (
-    a : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+    a : IN STD_LOGIC_VECTOR(14 DOWNTO 0);
     spo : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
   );
 END data_rom;
@@ -102,9 +102,9 @@ ARCHITECTURE data_rom_arch OF data_rom IS
       C_PARSER_TYPE : INTEGER
     );
     PORT (
-      a : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+      a : IN STD_LOGIC_VECTOR(14 DOWNTO 0);
       d : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-      dpra : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+      dpra : IN STD_LOGIC_VECTOR(14 DOWNTO 0);
       clk : IN STD_LOGIC;
       we : IN STD_LOGIC;
       i_ce : IN STD_LOGIC;
@@ -126,15 +126,15 @@ ARCHITECTURE data_rom_arch OF data_rom IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF data_rom_arch : ARCHITECTURE IS "data_rom,dist_mem_gen_v8_0_12,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF data_rom_arch: ARCHITECTURE IS "data_rom,dist_mem_gen_v8_0_12,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=dist_mem_gen,x_ipVersion=8.0,x_ipCoreRevision=12,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_ADDR_WIDTH=12,C_DEFAULT_DATA=0,C_DEPTH=4096,C_HAS_CLK=0,C_HAS_D=0,C_HAS_DPO=0,C_HAS_DPRA=0,C_HAS_I_CE=0,C_HAS_QDPO=0,C_HAS_QDPO_CE=0,C_HAS_QDPO_CLK=0,C_HAS_QDPO_RST=0,C_HAS_QDPO_SRST=0,C_HAS_QSPO=0,C_HAS_QSPO_CE=0,C_HAS_QSPO_RST=0,C_HAS_QSPO_SRST=0,C_HAS_SPO=1,C_HAS_WE=0,C_MEM_INIT_FILE=data" & 
-"_rom.mif,C_ELABORATION_DIR=./,C_MEM_TYPE=0,C_PIPELINE_STAGES=0,C_QCE_JOINED=0,C_QUALIFY_WE=0,C_READ_MIF=1,C_REG_A_D_INPUTS=0,C_REG_DPRA_INPUT=0,C_SYNC_ENABLE=1,C_WIDTH=1,C_PARSER_TYPE=1}";
+  ATTRIBUTE CORE_GENERATION_INFO OF data_rom_arch: ARCHITECTURE IS "data_rom,dist_mem_gen_v8_0_12,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=dist_mem_gen,x_ipVersion=8.0,x_ipCoreRevision=12,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_ADDR_WIDTH=15,C_DEFAULT_DATA=0,C_DEPTH=32768,C_HAS_CLK=0,C_HAS_D=0,C_HAS_DPO=0,C_HAS_DPRA=0,C_HAS_I_CE=0,C_HAS_QDPO=0,C_HAS_QDPO_CE=0,C_HAS_QDPO_CLK=0,C_HAS_QDPO_RST=0,C_HAS_QDPO_SRST=0,C_HAS_QSPO=0,C_HAS_QSPO_CE=0,C_HAS_QSPO_RST=0,C_HAS_QSPO_SRST=0,C_HAS_SPO=1,C_HAS_WE=0,C_MEM_INIT_FILE=dat" & 
+"a_rom.mif,C_ELABORATION_DIR=./,C_MEM_TYPE=0,C_PIPELINE_STAGES=0,C_QCE_JOINED=0,C_QUALIFY_WE=0,C_READ_MIF=1,C_REG_A_D_INPUTS=0,C_REG_DPRA_INPUT=0,C_SYNC_ENABLE=1,C_WIDTH=1,C_PARSER_TYPE=1}";
 BEGIN
   U0 : dist_mem_gen_v8_0_12
     GENERIC MAP (
       C_FAMILY => "zynq",
-      C_ADDR_WIDTH => 12,
+      C_ADDR_WIDTH => 15,
       C_DEFAULT_DATA => "0",
-      C_DEPTH => 4096,
+      C_DEPTH => 32768,
       C_HAS_CLK => 0,
       C_HAS_D => 0,
       C_HAS_DPO => 0,
@@ -167,7 +167,7 @@ BEGIN
     PORT MAP (
       a => a,
       d => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1)),
-      dpra => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 12)),
+      dpra => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 15)),
       clk => '0',
       we => '0',
       i_ce => '1',

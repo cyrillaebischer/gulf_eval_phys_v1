@@ -54,7 +54,7 @@
 ------------- Begin Cut here for COMPONENT Declaration ------ COMP_TAG
 COMPONENT data_rom
   PORT (
-    a : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+    a : IN STD_LOGIC_VECTOR(14 DOWNTO 0);
     spo : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
   );
 END COMPONENT;

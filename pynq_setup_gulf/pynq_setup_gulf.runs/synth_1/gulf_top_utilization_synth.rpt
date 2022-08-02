@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Wed Jul 13 15:24:19 2022
+| Date         : Thu Jul 28 10:57:00 2022
 | Host         : LAPTOP-ISQIQK2U running 64-bit major release  (build 9200)
 | Command      : report_utilization -file gulf_top_utilization_synth.rpt -pb gulf_top_utilization_synth.pb
 | Design       : gulf_top
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |    9 |     0 |     53200 |  0.02 |
-|   LUT as Logic          |    9 |     0 |     53200 |  0.02 |
+| Slice LUTs*             |   10 |     0 |     53200 |  0.02 |
+|   LUT as Logic          |   10 |     0 |     53200 |  0.02 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |   14 |     0 |    106400 |  0.01 |
-|   Register as Flip Flop |   14 |     0 |    106400 |  0.01 |
+| Slice Registers         |   18 |     0 |    106400 |  0.02 |
+|   Register as Flip Flop |   18 |     0 |    106400 |  0.02 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 14    |          Yes |       Reset |            - |
+| 18    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -98,7 +98,7 @@ Table of Contents
 | OUT_FIFO                    |    0 |     0 |        16 |  0.00 |
 | IN_FIFO                     |    0 |     0 |        16 |  0.00 |
 | IDELAYCTRL                  |    0 |     0 |         4 |  0.00 |
-| IBUFDS                      |    1 |     0 |       121 |  0.83 |
+| IBUFDS                      |    2 |     0 |       121 |  1.65 |
 | PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        16 |  0.00 |
 | PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        16 |  0.00 |
 | IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |       200 |  0.00 |
@@ -146,17 +146,19 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   14 |        Flop & Latch |
-| OBUFDS   |    4 |                  IO |
-| LUT4     |    3 |                 LUT |
-| IBUF     |    3 |                  IO |
-| CARRY4   |    3 |          CarryLogic |
-| LUT6     |    2 |                 LUT |
-| LUT2     |    2 |                 LUT |
-| INV      |    2 |                 LUT |
+| FDRE     |   18 |        Flop & Latch |
+| LUT6     |    6 |                 LUT |
+| CARRY4   |    4 |          CarryLogic |
+| OBUFDS   |    2 |                  IO |
+| IBUFDS   |    2 |                  IO |
+| IBUF     |    2 |                  IO |
+| OBUF     |    1 |                  IO |
+| LUT5     |    1 |                 LUT |
+| LUT4     |    1 |                 LUT |
 | LUT3     |    1 |                 LUT |
+| LUT2     |    1 |                 LUT |
 | LUT1     |    1 |                 LUT |
-| IBUFDS   |    1 |                  IO |
+| INV      |    1 |                 LUT |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
